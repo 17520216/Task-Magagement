@@ -13,6 +13,10 @@ const login = () => {
     console.log("🚀1111---->", 1111);
   };
 
+  const register = () => {
+    console.log("🚀2222---->", 2222);
+  };
+
   return (
     <MasterPage title="LoginPage">
       <UILogin />
