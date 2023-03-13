@@ -5,13 +5,13 @@ import MasterPage from '@/components/master'
 import dynamic from 'next/dynamic';
 
 import React from 'react'
-const UITask = dynamic(() => import('@/components/website/pages/UITask'));
-const task = () => {
+const UISetting = dynamic(() => import('@/components/website/pages/UISetting'));
+const setting = () => {
     return (
         <MasterPage title="Task">
-            <UITask />
+            <UISetting />
         </MasterPage>
     )
 }
 
-export default task
+export default setting

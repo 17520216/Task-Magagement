@@ -5,13 +5,13 @@ import MasterPage from '@/components/master'
 import dynamic from 'next/dynamic';
 
 import React from 'react'
-const UITask = dynamic(() => import('@/components/website/pages/UITask'));
-const task = () => {
+const UITimeline = dynamic(() => import('@/components/website/pages/UITimeline'));
+const timeline = () => {
     return (
         <MasterPage title="Task">
-            <UITask />
+            <UITimeline />
         </MasterPage>
     )
 }
 
-export default task
+export default timeline
