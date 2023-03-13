@@ -13,6 +13,9 @@ const login = () => {
     console.log("🚀1111---->", 1111);
   };
 
+  const logOut = () => { 
+    console.log('🚀333---->', 333);
+   }
   return (
     <MasterPage title="LoginPage">
       <UILogin />
