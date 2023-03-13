@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 
 const GlobalStyle = () => (
@@ -113,6 +114,9 @@ const GlobalStyle = () => (
         /* Firefox */
         input[type='number'] {
             -moz-appearance: textfield;
+        }
+        button, [type='button'], [type='reset'], [type='submit']{
+            background-color: inherit;
         }
 
     `}</style>
