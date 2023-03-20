@@ -6,18 +6,17 @@ import Description from "@/components/elements/Description";
 import { Typography } from "antd";
 import asset from "@/plugins/assets";
 const { Title } = Typography;
-import { ReactNode } from "react";
 const contentStyle = {
-    width: "max-content",
-    margin: 0,
-  };
-  
+  width: "max-content",
+  margin: 0,
+};
+
 const UITask = () => {
-    const [size, setSize] = useState("middle");
-    const handleSizeChange = (e) => {
-      setSize(e.target.value);
-    };
-  
+  const [size, setSize] = useState("middle");
+  const handleSizeChange = (e) => {
+    setSize(e.target.value);
+  };
+
   return (
     <div className="w-[66%] mt-[70px] ml-[94px] bg-[#f3f4f8] h-full px-[40px] py-[30px]">
       <div className="flex justify-between items-center">
@@ -63,70 +62,79 @@ const UITask = () => {
         <Category title="Review" />
       </div>
       <div className="grid grid-cols-4 gap-y-4 gap-x-[20px]">
-        <Description
-          heading="Design"
-          imgCart={asset("/images/imgCart.jpg")}
-          title="Create styleguide foundation"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Research"
-          title="Copywriting Content"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Planning"
-          title="Update requiment list"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Research"
-          title="Auditing information architecture"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Content"
-          imgCart={asset("/images/imgCart.jpg")}
-          title="Update support documentation"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Research"
-          title="Qualitative research planning"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Planning"
-          title="Listing deliverables checklist"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Research"
-          title="Qualitative research planning"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Design"
-          imgCart={asset("/images/imgCart.jpg")}
-          title="Copywriting Content"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Content"
-          imgCart={asset("/images/imgCart.jpg")}
-          title="Design System"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Design"
-          title="High fedality UI Desktop"
-          des="Create content for peceland App"
-        />
-        <Description
-          heading="Content"
-          title="Listing deliverables checklist"
-          des="Create content for peceland App"
-        />
+        <div className="list">
+          <Description
+            heading="Design"
+            imgCart={asset("/images/imgCart.jpg")}
+            title="Create styleguide foundation"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Research"
+            title="Copywriting Content"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Planning"
+            title="Update requiment list"
+            des="Create content for peceland App"
+          />
+        </div>
+
+        <div className="list">
+          <Description
+            heading="Research"
+            title="Auditing information architecture"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Content"
+            imgCart={asset("/images/imgCart.jpg")}
+            title="Update support documentation"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Research"
+            title="Qualitative research planning"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Planning"
+            title="Listing deliverables checklist"
+            des="Create content for peceland App"
+          />
+        </div>
+        <div className="list">
+          <Description
+            heading="Research"
+            title="Qualitative research planning"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Design"
+            imgCart={asset("/images/imgCart.jpg")}
+            title="Copywriting Content"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Content"
+            imgCart={asset("/images/imgCart.jpg")}
+            title="Design System"
+            des="Create content for peceland App"
+          />
+        </div>
+        <div className="list">
+          <Description
+            heading="Design"
+            title="High fedality UI Desktop"
+            des="Create content for peceland App"
+          />
+          <Description
+            heading="Content"
+            title="Listing deliverables checklist"
+            des="Create content for peceland App"
+          />
+        </div>
       </div>
       <div className="fixed top-[70px] right-0 w-[27.5%] px-[40px] py-[30px] ">
         <div className="pb-[30px] border-b-[1px] border-b-solid border-b-[#E8EDF1] mb-[30px]">
@@ -212,7 +220,7 @@ const UITask = () => {
             type="text"
           />
           <Space wrap>
-            <Button danger type="primary" >
+            <Button danger type="primary">
               ADD TASK
             </Button>
           </Space>
@@ -222,8 +230,8 @@ const UITask = () => {
           <Carousel
             // afterChange={onChange}
             arrows={true}
-            prevArrow={ReactNode}
-            nextArrow={ReactNode}
+            prevArrow={<></>}
+            nextArrow={<></>}
           >
             <div style={contentStyle}>
               <img src={asset("/images/chris.png")} alt="" />

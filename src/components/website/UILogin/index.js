@@ -19,8 +19,8 @@ const UILogin = () => {
       >
         <FormSignUp />
         <FormLogin />
-        <div className="overlay-container">
-          <div className="overlay">
+        {/* <div className="overlay-container">
+          <div className="overlay translate-x-[-100%]">
             <div className="overlay-panel overlay-left">
               <h1>Welcome Back!</h1>
               <p>
@@ -46,7 +46,7 @@ const UILogin = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <footer>
         <p>

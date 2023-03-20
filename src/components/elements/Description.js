@@ -9,7 +9,7 @@ const dateFormat = 'YYYY/MM/DD';
 dayjs.extend(customParseFormat);
 const Description = ({ heading, imgCart, title, des, time, imgMem, amoutDone }) => {
     return (
-        <div className='rounded-[12px] bg-[#ffffff] px-[18px] py-[16px] flex justify-center items-start flex-col gap-y-2 h-fit'>
+        <div className='rounded-[12px] bg-[#ffffff] px-[18px] py-[16px] flex justify-center items-start flex-col gap-y-2 h-fit my-[20px]'>
             <Title  level={5}>{heading}</Title>
             <img className='rounded-[12px]' src={imgCart} alt="" />
             <p className='font-bold'>{title}</p>

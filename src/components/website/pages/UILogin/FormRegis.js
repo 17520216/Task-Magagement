@@ -1,4 +1,4 @@
-import MainProvider, { MainContext } from "@/components/context/MainProvider";
+import { MainContext } from "@/components/context/MainProvider";
 import { api } from "@/config/api";
 import { PATH_API } from "@/config/path";
 import { message } from "antd";
@@ -6,7 +6,7 @@ import React, { useContext, useState } from "react";
 import Social from "./Social";
 
 const FormRegis = () => {
-  const { setActive} = useContext(MainContext);
+  const { setActive } = useContext(MainContext);
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -17,7 +17,11 @@ const FormRegis = () => {
     setForm({ ...form, [name]: value });
   };
   const handleRegister = async () => {
-    const res = await api({
+    if (!form.email || !form.password) {
+      message.warning("Please enter a valid email and password");
+      return;
+    }
+    await api({
       url: PATH_API.login,
       method: "POST",
       data: form,
@@ -27,12 +31,12 @@ const FormRegis = () => {
       email: "",
       password: "",
     });
-    setActive(true)
+    setActive(true);
   };
 
   return (
     <div className="flex justify-center items-center flex-col gap-y-[20px] h-full w-1/2 absolute top-0 right-0 z-10 p-[35px] regis container  ">
-      <h1 className="text-[45px] font-normal ">Register Hire</h1>
+      <h1 className="text-[45px] font-normal ">Register here</h1>
       <div className="flex justify-center items-center flex-col">
         {/* <input
           type="text"

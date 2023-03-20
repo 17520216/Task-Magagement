@@ -1,3 +1,4 @@
+import { TimelineIcon } from "@/components/elements/Icon";
 import asset from "@/plugins/assets";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +16,7 @@ const Aside = () => {
           <img src={asset("images/dashboard-icon.png")} alt="" />
         </Link>
         <Link href="/timeline">
-          <img src={asset("images/timeline-icon.png")} alt="" />
+          <TimelineIcon />
         </Link>
         <Link href="/task">
           <img src={asset("images/task-icon.png")} alt="" />

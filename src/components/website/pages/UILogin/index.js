@@ -2,9 +2,13 @@ import  { MainContext } from "@/components/context/MainProvider";
 import React, { useContext, useState } from "react";
 import FormRegis from "./FormRegis";
 import FormSignIn from "./FormSignIn";
+import "./style.scss";
 
 const UILogin = () => {
   const { active, setActive } = useContext(MainContext);
+
+
+  
   return (
     <div
       className={`ui-login flex justify-center items-center h-screen container ${
@@ -14,7 +18,7 @@ const UILogin = () => {
       <div className="relative w-[775px] min-h-[550px] bg-gradient-to-r from-purple-300 to-pink-200 rounded-[30px] overflow-hidden">
         <FormSignIn />
         <FormRegis />
-        <div className="absolute top-0 left-1/2  w-1/2 h-full   ">
+        <div className="absolute top-0 left-1/2  w-1/2 h-full">
           <div className="relative h-full  w-[200%] overlay container">
             <div className="overlay-left absolute top-0 left-0 h-full flex justify-center items-center flex-col gap-y-[25px]  bg-transparent z-[-1]">
               <h1>Start Your Journey</h1>
